@@ -92,8 +92,6 @@ export class ParamPrompt {
       let type = this.paramTypes[param.type], value = type.read.call(this.pm, dom), bad
       if (param.validate)
         bad = param.validate(value)
-      else if (type.validate)
-          bad = type.validate(dom)
       else if (!value && param.default == null)
         bad = "No default value available"
 
