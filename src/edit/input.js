@@ -473,6 +473,7 @@ handlers.drop = (pm, e) => {
   let fragment = fromClipboard(pm, e.dataTransfer)
   if (fragment) {
     e.preventDefault()
+    // this is a test
     let insertPos = pm.posAtCoords({left: e.clientX, top: e.clientY}), origPos = insertPos
     if (!insertPos) return
     let tr = pm.tr
